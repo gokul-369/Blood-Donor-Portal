@@ -127,7 +127,7 @@ namespace Blood_Donor_Portal_BL
                     SqlCommand cmd1 = new SqlCommand("insert into ForgetPassRequest values('"+myguid+"','"+uid+"',getdate())",con);
                     cmd1.ExecuteNonQuery();
 
-                    MailMessage mailmessage = new MailMessage("gokul369@outlook.com", mail);
+                    MailMessage mailmessage = new MailMessage("Youremail@gmail.com", mail);
                     StringBuilder body = new StringBuilder();
                     body.Append("Hey," + uname + ",<br /><br />");
                     body.Append("Here is your link to reset your password");
@@ -141,8 +141,8 @@ namespace Blood_Donor_Portal_BL
 
                     smtpclient.Credentials = new System.Net.NetworkCredential()
                     {
-                        UserName = "gokul369@outlook.com",
-                        Password = "Thendraloutlook"
+                        UserName = "Youremail@gmail.com",
+                        Password = "pwd"
                     };
                     smtpclient.EnableSsl = true;
                     smtpclient.Send(mailmessage);
