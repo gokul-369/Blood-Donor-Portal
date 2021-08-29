@@ -1,0 +1,41 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="AdminPanel.master.cs" Inherits="Blood_Donor_Portal.AdminPanel" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>Admin</title>
+    <link rel="stylesheet" href="AdminPanel.css" />
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="Container">
+        <div class="Heading">
+            <div class="logo">
+                    <img src="Img/logo.svg" />
+                </div>
+            <div class="title">
+            <h3>Admin Dashboard</h3>
+            <asp:SiteMapPath ID="SiteMapPath1" CssClass="sitemap" runat="server">
+        </asp:SiteMapPath>
+                </div>
+        </div>
+        <div class="Stats">
+            <div class="sidebar">
+                <div class="options">
+                    <asp:Button ID="Button1" runat="server" Class="btns" PostBackUrl="~/A1.aspx" Text="Users" />
+                    <asp:Button ID="Button2" runat="server" Class="btns" PostBackUrl="~/A2.aspx" Text="Donors In Waitinglist" />
+                    <asp:Button ID="Button3" runat="server" Class="btns" PostBackUrl="~/A3.aspx" Text="Add Donor" />
+                    <asp:Button ID="Button4" runat="server" Class="btns" PostBackUrl="~/A4.aspx" Text="Donor List" />
+                    <asp:Button ID="Button5" runat="server" Class="btns" PostBackUrl="~/Admin_login.aspx" Text="Logout" OnClick="Button5_Click" />
+                  </div>
+            </div>
+            <div class="res">
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+            </div>
+        </div>
+    </div>
+    </form>
+</body>
+</html>
